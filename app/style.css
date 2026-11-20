@@ -1,0 +1,66 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f6f3ee; color: #1d2129; font-family: Georgia, "Iowan Old Style", Palatino, serif; font-size: 15px; line-height: 1.45; }
+body, button, input { font-family: Georgia, "Iowan Old Style", Palatino, serif; }
+.topbar { display: flex; justify-content: space-between; gap: 24px; padding: 18px 28px 12px; border-bottom: 3px solid #d24e2a; background: #fffdf8; }
+h1 { margin: 0; font-size: 34px; letter-spacing: .5px; color: #1d2129; }
+.subtitle { margin: 4px 0 0; color: #626a75; font-size: 14px; }
+.progressbox { text-align: right; min-width: 260px; }
+.bigcount { font-size: 30px; font-weight: bold; color: #d24e2a; }
+.bigcount .of { font-size: 16px; color: #626a75; font-weight: normal; }
+.bar { height: 10px; background: #e3ddd2; border-radius: 6px; margin: 6px 0 4px; overflow: hidden; }
+.fill { height: 100%; width: 0%; background: #d24e2a; }
+.tierline { margin: 0; color: #626a75; font-size: 13px; }
+.tabs { display: flex; gap: 8px; padding: 10px 28px 0; }
+.tab { border: 1px solid #c9c2b4; background: #efe9dd; padding: 8px 16px; border-radius: 8px 8px 0 0; font-size: 15px; cursor: pointer; }
+.tab.active { background: #d24e2a; color: #fff; border-color: #d24e2a; font-weight: bold; }
+.controls { padding: 12px 28px; background: #fffdf8; border-bottom: 1px solid #ddd5c6; }
+.group { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 8px; }
+.grouplabel { font-weight: bold; margin-right: 4px; min-width: 38px; }
+.chip { border: 1px solid #b9b2a2; background: #fff; border-radius: 20px; padding: 5px 12px; font-size: 14px; cursor: pointer; }
+.chip.active { background: #1d2129; color: #fff; border-color: #1d2129; }
+.tools { gap: 10px; }
+#searchBox { padding: 7px 10px; border: 1px solid #b9b2a2; border-radius: 6px; font-size: 14px; width: 200px; background: #fff; }
+.spoiler { font-weight: bold; }
+#exportBtn, .importbtn, #resetBtn { border: 1px solid #1d2129; background: #1d2129; color: #fff; border-radius: 6px; padding: 7px 12px; font-size: 14px; cursor: pointer; }
+.importbtn { display: inline-block; }
+.importbtn input { display: none; }
+#resetBtn { background: #fff; color: #1d2129; }
+.spoilerNote { margin: 2px 0 0; color: #626a75; font-size: 13px; font-style: italic; }
+main { padding: 14px 28px 8px; }
+.view.hidden { display: none; }
+.trackergrid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 20px; align-items: start; }
+.listhead { margin: 0 0 8px; font-weight: bold; }
+.listhead span:last-child { color: #8a6d00; font-weight: normal; }
+.trophylist { list-style: none; margin: 0; padding: 0; }
+.trophylist li { display: flex; gap: 10px; align-items: flex-start; background: #fff; border: 1px solid #ddd5c6; border-radius: 10px; padding: 9px 12px; margin-bottom: 7px; cursor: pointer; }
+.trophylist li.selected { border-color: #d24e2a; box-shadow: 0 0 0 2px #d24e2a33; }
+.trophylist li.earned { background: #eef6e8; }
+.trophylist input { margin-top: 3px; width: 17px; height: 17px; accent-color: #d24e2a; flex: none; }
+.tname { font-weight: bold; font-size: 15px; }
+.tdesc { color: #4a4f58; font-size: 13px; }
+.tmeta { margin-top: 3px; font-size: 12px; color: #626a75; }
+.badge { display: inline-block; border-radius: 4px; padding: 1px 7px; font-size: 12px; font-weight: bold; text-transform: capitalize; }
+.badge.platinum { background: #d8e1ea; color: #33475e; }
+.badge.gold { background: #d4af5a; color: #4a3600; }
+.badge.silver { background: #c3c9cf; color: #333; }
+.badge.bronze { background: #c98b5e; color: #fff; }
+.flag { color: #a33; font-weight: bold; }
+.unconf { color: #8a6d00; font-weight: bold; }
+.detail { position: sticky; top: 12px; background: #fff; border: 2px solid #d24e2a; border-radius: 14px; padding: 16px 18px; }
+.detail h2 { margin: 0 0 4px; font-size: 22px; }
+.detail .grade { font-size: 14px; color: #626a75; margin: 0 0 8px; }
+.detail p { margin: 8px 0; }
+.detail .guide { font-size: 16px; }
+.detail .source { border-top: 1px solid #ddd5c6; padding-top: 8px; font-size: 13px; color: #4a4f58; }
+.detail .warn { background: #fdf3d7; border: 1px solid #d4af5a; border-radius: 8px; padding: 8px 10px; font-size: 14px; }
+h2 { font-size: 24px; margin: 4px 0 8px; }
+.roadmapIntro { max-width: 980px; }
+.stages { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.stages li { background: #fff; border: 1px solid #ddd5c6; border-top: 4px solid #d24e2a; border-radius: 10px; padding: 12px; }
+.stages h3 { margin: 0 0 4px; font-size: 16px; }
+.stages .hours { color: #d24e2a; font-weight: bold; margin: 0 0 6px; }
+.stages p { margin: 4px 0; font-size: 13px; }
+.roadmapTotal { font-weight: bold; margin-top: 14px; }
+footer { padding: 12px 28px 20px; color: #626a75; font-size: 13px; border-top: 1px solid #ddd5c6; }
+footer p { margin: 6px 0; }
+.empty { color: #626a75; font-style: italic; padding: 12px; }

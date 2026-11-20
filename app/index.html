@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice Platinum Tracker — GTA 6 Trophy Guide</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div>
+    <h1>Vice Platinum Tracker</h1>
+    <p class="subtitle">GTA 6 trophy guide &amp; tracker — Grand Theft Auto VI, PlayStation 5 · 55 trophies · 1,000 Gamerscore on Xbox · 0 online trophies</p>
+  </div>
+  <div class="progressbox" aria-label="Progress">
+    <div class="bigcount"><span id="earnedCount">0</span><span class="of">/ 55 earned</span></div>
+    <div class="bar"><div class="fill" id="progressFill"></div></div>
+    <p class="tierline" id="tierLine">1 Platinum · 2 Gold · 6 Silver · 46 Bronze</p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <button type="button" class="tab active" data-tab="tracker">Tracker</button>
+  <button type="button" class="tab" data-tab="roadmap">Platinum Roadmap · ~200 h</button>
+  <button type="button" class="tab" data-tab="missables">Missables · <span id="missableTabCount">13</span></button>
+</nav>
+
+<section class="controls" aria-label="Filters and tools">
+  <div class="group" id="tierFilters" aria-label="Filter by tier">
+    <span class="grouplabel">Tier</span>
+    <button type="button" class="chip active" data-tier="all">All 55</button>
+    <button type="button" class="chip" data-tier="platinum">Platinum</button>
+    <button type="button" class="chip" data-tier="gold">Gold</button>
+    <button type="button" class="chip" data-tier="silver">Silver</button>
+    <button type="button" class="chip" data-tier="bronze">Bronze</button>
+  </div>
+  <div class="group" id="kindFilters" aria-label="Filter by kind">
+    <span class="grouplabel">Kind</span>
+    <button type="button" class="chip active" data-kind="all">All kinds</button>
+    <button type="button" class="chip" data-kind="story">Story</button>
+    <button type="button" class="chip" data-kind="heist">Heist</button>
+    <button type="button" class="chip" data-kind="activities">Activities</button>
+    <button type="button" class="chip" data-kind="collectibles">Collectibles</button>
+    <button type="button" class="chip" data-kind="completion">100%</button>
+    <button type="button" class="chip" data-kind="missable">Missable</button>
+  </div>
+  <div class="group tools">
+    <input id="searchBox" type="search" placeholder="Search a trophy…" aria-label="Search trophies">
+    <label class="spoiler"><input id="spoilerToggle" type="checkbox"> Hide story spoilers</label>
+    <button id="exportBtn" type="button">Export progress</button>
+    <label class="importbtn">Import progress<input id="importFile" type="file" accept="application/json"></label>
+    <button id="resetBtn" type="button">Reset</button>
+  </div>
+  <p class="spoilerNote" id="spoilerNote">Spoiler setting: when ON, the names and descriptions of story trophies stay hidden until you earn them.</p>
+</section>
+
+<main>
+  <section id="view-tracker" class="view">
+    <div class="trackergrid">
+      <div>
+        <p class="listhead"><span id="shownCount">55 trophies shown</span><span id="unconfirmedNote"> · 28 hidden trophies marked “belum terkonfirmasi”</span></p>
+        <ul class="trophylist" id="trophyList"></ul>
+      </div>
+      <aside class="detail" id="detailPane" aria-label="Selected trophy guide"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view hidden">
+    <h2>Platinum roadmap — about 200 hours</h2>
+    <p class="roadmapIntro">Built from the official descriptions: story chapters and missions first, then stranger strands and heists, then activities, then collectibles and exploration, and finally the 100% cleanup. Do the missable-flagged story trophies in their chapter — mission replay can recover most of them, except Positive Mental Attitude, which may lock after Chapter 1.</p>
+    <ol class="stages" id="roadmapStages"></ol>
+    <p class="roadmapTotal">Total: roughly 200 hours — 60 h story · 30 h strands &amp; heists · 40 h activities · 50 h collectibles &amp; exploration · 20 h cleanup.</p>
+  </section>
+
+  <section id="view-missables" class="view hidden">
+    <h2>Missable trophies — 13 flagged</h2>
+    <p class="roadmapIntro">Every missable flag here is built from the official descriptions. Twelve are tied to a specific story chapter or mission: finish them in that mission, or replay the mission afterwards. One is different — Positive Mental Attitude (meditation, Chapter 1) is the only trophy that may be missable for good if a Chapter 1 meditation spot is skipped.</p>
+    <ul class="trophylist" id="missableList"></ul>
+  </section>
+</main>
+
+<footer>
+  <p>Sources per trophy: PushSquare · GTABase · WikiGTAVI · KeenGamer · Exophase · PSNProfiles · Official PlayStation description. Names, descriptions and grades are the official PlayStation list as listed by Exophase and PSNProfiles. Guides are written in our own words for this entry.</p>
+  <p>Honest note: 28 hidden trophies are marked “belum terkonfirmasi” — their unlock methods are not confirmed in public sources yet, so this guide invents no method for them. Check the official sources after release. Works fully offline: every file this app loads is a file under app/.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
